@@ -14,12 +14,12 @@ export default {
 }
 </script>
 <template>
-    <Header v-if="auth.is_authenticated == true" />
+    <Header v-if="auth.is_authenticated" />
     <div id="section-body">
-        <NavigationComponent v-if="auth.is_authenticated == true" />
+        <NavigationComponent v-if="auth.is_authenticated" />
         <router-view class="section-router"></router-view>
     </div>
-    <div id="section-player" v-if="auth.is_authenticated == true">
+    <div id="section-player" v-if="auth.is_authenticated">
         <AudioPlayer />
     </div>
 
