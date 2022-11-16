@@ -24,7 +24,10 @@ const routes = [
     path: "/about",
     component: About,
   },
-  { path: "/albums", component: Albums },
+  {
+    path: "/albums",
+    component: Albums,
+  },
 ];
 
 const router = createRouter({

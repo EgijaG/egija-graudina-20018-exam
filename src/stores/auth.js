@@ -17,14 +17,15 @@ export const auth = reactive({
   },
 
   authenticate(email, password) {
+    console.log("Authenticating....");
     const mail = "egija.graudina@va.lv";
     const pass = "123456";
-    if (email !== mail || password !== pass) {
+    if (email != mail && password != pass) {
       console.log("Incorrect credentials");
       return;
     }
+    this.is_authenticated = true;
     localStorage.is_authenticated = true;
-    console.log(localStorage.is_authenticated);
     router.push("/");
   },
 
@@ -32,7 +33,6 @@ export const auth = reactive({
     localStorage.clear();
     this.is_authenticated = false;
     localStorage.is_authenticated = false;
-    console.log(this.is_authenticated);
     // change to login page
     router.push("/login");
   },
