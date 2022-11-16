@@ -20,7 +20,7 @@ export const auth = reactive({
     console.log("Authenticating....");
     const mail = "egija.graudina@va.lv";
     const pass = "123456";
-    if (email != mail && password != pass) {
+    if (email != mail || password != pass) {
       console.log("Incorrect credentials");
       return;
     }
